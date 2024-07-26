@@ -7,6 +7,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:growingio_flutter_plugin/growingio_flutter_plugin.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_shopper/common/theme.dart';
 import 'package:provider_shopper/models/cart.dart';
@@ -18,6 +19,18 @@ import 'package:window_size/window_size.dart';
 
 void main() {
   setupWindow();
+
+  var option = AutotrackerConfiguration(
+    "0a1b4118dd954ec3bcc69da5138bdb96", 
+    "ab555003531e0fd1", 
+    "growing.bf30ad277eaae1aa");
+  option.debugEnabled = true;
+  option.sessionInterval = 30;
+  option.dataUploadInterval = 15;
+  option.idMappingEnabled = true;
+  option.requestTimeout = 10;
+  GrowingAutotracker.startWithConfiguration(option);
+
   runApp(const MyApp());
 }
 

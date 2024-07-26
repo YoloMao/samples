@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:growingio_flutter_plugin/growingio_flutter_plugin.dart';
 
 class MyLogin extends StatelessWidget {
   const MyLogin({super.key});
@@ -38,6 +39,7 @@ class MyLogin extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   context.pushReplacement('/catalog');
+                  GrowingAutotracker.getContext().trackCustomEvent(eventName: 'test');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.yellow,

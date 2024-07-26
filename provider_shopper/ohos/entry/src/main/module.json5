@@ -1,0 +1,108 @@
+/*
+* Copyright (c) 2023 Hunan OpenValley Digital Industry Development Co., Ltd.
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+{
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "srcEntry": "./ets/entryabilitystage/EntryAbilityStage.ets",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": [
+      "phone"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "TrackTimerAbility",
+        "srcEntry": "./ets/tracktimerability/TrackTimerAbility.ets",
+        "description": "$string:TrackTimerAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:TrackTimerAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background"
+      },
+      {
+        "name": "SubTrackerAbility",
+        "srcEntry": "./ets/subtrackerability/SubTrackerAbility.ets",
+        "description": "$string:SubTrackerAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:SubTrackerAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background"
+      },
+      {
+        "name": "GeneralPropsAbility",
+        "srcEntry": "./ets/generalpropsability/GeneralPropsAbility.ets",
+        "description": "$string:GeneralPropsAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:GeneralPropsAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background"
+      },
+      {
+        "name": "TrackAbility",
+        "srcEntry": "./ets/trackability/TrackAbility.ets",
+        "description": "$string:TrackAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:TrackAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background"
+      },
+      {
+        "name": "HybridAbility",
+        "srcEntry": "./ets/hybridability/HybridAbility.ets",
+        "description": "$string:HybridAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:HybridAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background"
+      },
+      {
+        "name": "FlutterExampleAbility",
+        "srcEntry": "./ets/flutterability/FlutterExampleAbility.ets",
+        "description": "$string:HybridAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:HybridAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background"
+      }
+    ],
+    "requestPermissions": [
+      {"name" :  "ohos.permission.INTERNET"},
+    ]
+  }
+}
